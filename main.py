@@ -1,13 +1,12 @@
 from getData import *
-import os
 
 file = "tombola.xlsx"
 
 firstName, lastName, ticketNumber = chipData(file)
 
-list = []
-for i in ticketNumber :
-    list.insert(lastName)
+participants = []
+for i in range(len(ticketNumber)):
+    participants.append(f"{firstName[i]} {lastName[i]} - Ticket: {ticketNumber[i]}")
 
 
-print(list)
+print(participants)
